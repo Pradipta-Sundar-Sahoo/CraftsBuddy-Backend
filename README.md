@@ -1,4 +1,6 @@
 # 🎨 CraftBuddy Backend
+Frontend Repo Link: Frontend(https://github.com/sajji18/app)
+Telegram Bot Repo Link: Bot(https://github.com/Pradipta-Sundar-Sahoo/Craftsbuddy.git)
 
 **AI-Powered Artisan Marketplace Backend**
 
@@ -328,5 +330,6 @@ A: Activate virtual environment and run `pip install -r requirements.txt`
 ---
 
 **Built with ❤️ for artisans and craft lovers worldwide**
+
 
 *Empowering creativity through intelligent technology* 🎨✨
