@@ -8,10 +8,19 @@ pyjwt==2.8.0
 email-validator==2.1.0
 bcrypt==4.1.2
 alembic==1.13.1
-langgraph==0.0.62
-langchain==0.1.20
-langchain-google-genai==1.0.7
-langchain-openai==0.1.8
+
+# LangChain ecosystem - Option 1: Latest compatible versions
+langchain-core==0.3.41
+langchain==0.3.20
+langgraph==0.3.5
+langchain-google-genai==2.0.0
+langchain-openai==0.2.0
+
+# Vector database and AI
 pinecone-client==3.2.2
-openai==1.35.0
+openai==1.40.0
 numpy==1.24.3
+
+# Additional dependencies for LangChain
+pydantic>=1.10.0,<3
+requests>=2.25.1
