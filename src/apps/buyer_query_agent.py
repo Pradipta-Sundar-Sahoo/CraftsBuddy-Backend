@@ -530,7 +530,7 @@ class RelatedProductsAgent:
     async def find_related_products(self, state: QueryState) -> QueryState:
         """Find products related to the current results"""
         try:
-            state.workflow_path.append("related_products")
+            state.workflow_path.append("related_products_finder")
             
             if not state.reranked_products:
                 state.related_products = []
@@ -894,7 +894,7 @@ class BuyerQueryAgent:
         workflow.add_node("embedding_generator", self.embedding_agent.generate_embeddings)
         workflow.add_node("retriever", self.retriever.retrieve_products)
         workflow.add_node("reranker", self.reranker.rerank_products)
-        workflow.add_node("related_products", self.related_products.find_related_products)
+        workflow.add_node("related_products_finder", self.related_products.find_related_products)
         workflow.add_node("suggestion_agent", self.suggestion_agent.generate_suggestions)
         workflow.add_node("clarification_agent", self.clarification_agent.ask_for_clarification)
         workflow.add_node("support_agent", self.support_agent.provide_support)
@@ -923,11 +923,11 @@ class BuyerQueryAgent:
         # Shopping/Info flow
         workflow.add_edge("embedding_generator", "retriever")
         workflow.add_edge("retriever", "reranker")
-        workflow.add_edge("reranker", "related_products")
+        workflow.add_edge("reranker", "related_products_finder")
         
         # Decision node after product retrieval
         workflow.add_conditional_edges(
-            "related_products",
+            "related_products_finder",
             self._route_after_retrieval,
             {
                 "results": "final_results",
