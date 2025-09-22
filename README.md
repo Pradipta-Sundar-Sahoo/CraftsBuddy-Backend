@@ -133,31 +133,7 @@ CraftsBuddy-Backend/
 └── 📋 requirements.txt                # Python dependencies
 ```
 
-## 🔗 API Endpoints
 
-### 🔐 Authentication
-- `POST /api/auth/signup/email` - Email signup
-- `POST /api/auth/signup/phone` - Phone signup
-- `POST /api/auth/login/email` - Email login
-- `POST /api/auth/login/phone` - Phone login
-- `POST /api/auth/login/telegram` - Telegram login
-- `POST /api/auth/send-otp` - Send OTP verification
-- `POST /api/auth/verify-otp` - Verify OTP
-- `GET /api/auth/me` - Get current user
-- `POST /api/auth/complete-onboarding` - Complete seller onboarding
-
-### 📦 Catalog
-- `GET /api/catalog/products` - List products with pagination
-- `GET /api/catalog/products/{id}` - Get product details
-- `POST /api/catalog/query` - **AI-powered product search** 🤖
-
-### 👨‍💼 Seller Management
-- `GET /api/seller/profile` - Get seller profile
-- `PUT /api/seller/profile` - Update seller profile
-- `GET /api/seller/products` - List seller products
-- `POST /api/seller/products` - Create new product
-- `PUT /api/seller/products/{id}` - Update product
-- `DELETE /api/seller/products/{id}` - Delete product
 
 ## 🤖 AI Query System
 
@@ -217,19 +193,6 @@ Response:
 - **JSON Fields** for flexible metadata
 - **Indexes** for performance optimization
 
-## ☁️ Deployment
-
-### Docker Support
-```dockerfile
-# Dockerfile example
-FROM python:3.9-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-```
-
 ### Environment Variables
 ```bash
 # Production settings
@@ -243,21 +206,6 @@ GCS_BUCKET_NAME=your-production-bucket
 ### Health Checks
 - `GET /health` - System health status
 - `GET /api/routes` - Available API routes
-
-## 💰 Cost Estimation
-
-### Development (One-time)
-- **Backend Development**: $15,000 (200 hours × $75/hour)
-- **AI Integration**: $10,000 (100 hours × $100/hour)
-- **Testing & Deployment**: $8,000 (Various tasks)
-- **Total**: **$38,000**
-
-### Monthly Operational (Small Scale)
-- **Server Hosting**: $80 (4 vCPU, 8GB RAM)
-- **Database**: $50 (100GB PostgreSQL)
-- **AI Services**: $85 (OpenAI + Gemini + Pinecone)
-- **Storage**: $5 (Google Cloud Storage)
-- **Total**: **$220/month**
 
 ## 🔧 Development
 
@@ -297,40 +245,10 @@ alembic upgrade head
 - **ReDoc**: Available at `/redoc`
 - **Postman Collection**: `CraftBuddy_API_Postman_Collection.json`
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-### Common Issues
-
-**Q: AI system not working?**
-A: Check your API keys in `.env` file and run `python init_buyer_query_system.py`
-
-**Q: Database connection errors?**
-A: Verify `DATABASE_URL` and ensure PostgreSQL is running
-
-**Q: Import errors?**
-A: Activate virtual environment and run `pip install -r requirements.txt`
-
-### Contact
-- 📧 Email: support@craftbuddy.com
-- 💬 Discord: [Join our community](https://discord.gg/craftbuddy)
-- 📖 Docs: [docs.craftbuddy.com](https://docs.craftbuddy.com)
-
----
 
 **Built with ❤️ for artisans and craft lovers worldwide**
 
 
 *Empowering creativity through intelligent technology* 🎨✨
+
 
