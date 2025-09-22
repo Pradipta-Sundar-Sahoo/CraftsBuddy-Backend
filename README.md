@@ -1,6 +1,8 @@
 # 🎨 CraftBuddy Backend
-- Frontend Repo Link: Frontend(https://github.com/sajji18/app)
-- Telegram Bot Repo Link: Bot(https://github.com/Pradipta-Sundar-Sahoo/Craftsbuddy.git)
+- Frontend Repo Link: [Frontend Repo](https://github.com/sajji18/app)
+- Telegram Bot Repo Link: [Bot Repo](https://github.com/Pradipta-Sundar-Sahoo/Craftsbuddy.git)
+- Telegram Bot - [Bot link](https://t.me/CraftsBuddyBot)
+- Telegram Bot QR - ![Telegram Bot QR](https://github.com/user-attachments/assets/71d88b13-fa6b-477c-9381-e3e71a8d08cb)
 
 **AI-Powered Artisan Marketplace Backend**
 
@@ -250,5 +252,6 @@ alembic upgrade head
 
 
 *Empowering creativity through intelligent technology* 🎨✨
+
 
 
